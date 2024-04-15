@@ -8,6 +8,7 @@ This is a simple tax calculator web application that calculates the overall inco
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Tests](#Tests)
 
 ## Features
 
@@ -52,3 +53,11 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 3. Commit your changes (`git commit -am 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Create a new Pull Request.
+
+## Tests
+![sample1](https://github.com/0xHy0kR1/taxCalc/assets/90767483/a641a46f-cb2e-41aa-aa16-88eaba411bad)
+
+![sample2](https://github.com/0xHy0kR1/taxCalc/assets/90767483/97295757-af3e-48d7-a0e2-7b1cacc49382)
+
+
+Here is a screenshot showing that all tests are passing in the project.
