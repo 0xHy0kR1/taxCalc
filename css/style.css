@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    border: 2px solid black;
+}
+
+.custom-container{
+    max-width: 600px;
+    padding: 90px 42px 42px 42px;
+    
+}
+
+/* div containing all the input label submit */
+.tax-info-box{
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+}
+/* Main tax box CSS */
+.tax-box{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* input block CSS */
+.bottom-input{
+    border: 2px solid grey;
+}
+
+/* input box css */
+.bottom-input input{
+    width: 90vw;
+    height: 6vh;
+    outline: none;
+    padding: 2px 10px;
+    border: none;
+}
+
+/* bottom input box icon p tag css */
+.bottom-icon-input{
+    margin: auto;
+}
+
+/* bottom input box icon css */
+.bottom-icon-input img{
+    margin: auto 5px;
+}
+
+.alert-icon{
+    display: none;
+}
+
+/* top text css */
+.top-label{
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.top-icon-input{
+    display: inline;
+    margin: auto 0;
+}
+
+/* modal css */
+
+/* Styles for modal */
+.modal {
+    display: block;
+    position: fixed;
+    top: -100vh;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.display{
+    display: block !important;
+}
+
+#display-overlay{
+    display: block;
+}
+.modal .overlay{
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 100ms ease-in-out 200ms;
+}
+.modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 95%;
+    max-width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in-out;
+    opacity: 0;
+}
+
+.modal .modal-content h3{
+    margin: 10px 0px;
+    color: #111;
+    font-size: 25px;
+    text-align: center;
+}
+
+.modal .modal-content p{
+    margin: 15px 0px;
+    color: #222;
+    font-size: 16px;
+    text-align: center;
+}
+
+.modal .modal-content .modal-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.modal.active{
+    top: 0px;
+    transition: top 0ms ease-in-out 0ms;
+}
+
+.modal.active .overlay{
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.modal.active .modal-content{
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
