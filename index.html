@@ -16,103 +16,107 @@
 </head>
 
 <body>
-    <header>
-        <label id="dark-change"></label>
-    </header>
-    <main class="container custom-container">
-        <!-- div containing input box and icons and label -->
-        <div class="tax-info-box">
-            <div class="col tax-box">
-                <div class="col">
-                    <div class="top-label d-flex">
-                        <label for="info-label">Enter gross annual income</label>
-                        <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Gross annual
-                        income is your total
-                        salary in a year
-                        before any
-                        deductions">
-                            <img src="/img/help-circle.svg" alt="alert">
-                        </p>
+    <div class="outer-container">
+        <header>
+            <label id="dark-change"></label>
+        </header>
+        <div class="inner-main">
+            <main class="container custom-container">
+                <!-- div containing input box and icons and label -->
+                <div class="tax-info-box">
+                    <div class="col tax-box">
+                        <div class="col">
+                            <div class="top-label d-flex">
+                                <label for="info-label">Enter gross annual income</label>
+                                <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Gross annual
+                                income is your total
+                                salary in a year
+                                before any
+                                deductions">
+                                    <img src="/img/help-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                            <div class="bottom-input d-flex" >
+                                <input class="gross-income-input" type="text" placeholder="Enter gross annual income">
+                                <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
+                                    <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Second input box -->
+                        <div class="col">
+                            <div class="top-label d-flex">
+                                <label for="info-label">Enter extra income</label>
+                                <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter any additional income from other sources">
+                                    <img src="/img/help-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                            <div class="bottom-input d-flex">
+                                <input class="add-income-input" type="text" placeholder="Enter extra income from other sources">
+                                <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
+                                    <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                        </div>
+                        <!-- third input box -->
+                        <div class="col">
+                            <div class="top-label d-flex">
+                                <label for="info-label">Enter age group</label>
+                                <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter the age group to which you belong">
+                                    <img src="/img/help-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                            <div class="bottom-input d-flex">
+                                <select class="age-input">
+                                    <option value="" selected disabled>Select age group</option>
+                                    <option value="<40">&lt; 40</option>
+                                    <option value="40-59">&ge; 40 &amp; &lt; 60</option>
+                                    <option value="≥60">&ge; 60</option>
+                                </select>
+                                <p class="bottom-icon-input error-icon" data-bs-toggle="tooltip" data-bs-title="This field is required">
+                                    <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                        </div>
+                        <!-- fourth input box -->
+                        <div class="col">
+                            <div class="top-label d-flex">
+                                <label for="info-label">Enter total applicable deductions</label>
+                                <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter the total amount of applicable deductions">
+                                    <img src="/img/help-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                            <div class="bottom-input d-flex">
+                                <input class="deductions-income-input" type="text" placeholder="Add total applicable deductions">
+                                <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
+                                    <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bottom-input d-flex" >
-                        <input class="gross-income-input" type="text" placeholder="Enter gross annual income">
-                        <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
-                            <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
-                        </p>
+                    <div class="d-grid gap-2">
+                        <button class="submit btn btn-primary" type="button" id="openModal">Submit</button>
                     </div>
-                </div>
-                <!-- Second input box -->
-                <div class="col">
-                    <div class="top-label d-flex">
-                        <label for="info-label">Enter extra income</label>
-                        <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter any additional income from other sources">
-                            <img src="/img/help-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                    <div class="bottom-input d-flex">
-                        <input class="add-income-input" type="text" placeholder="Enter extra income from other sources">
-                        <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
-                            <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                </div>
-                <!-- third input box -->
-                <div class="col">
-                    <div class="top-label d-flex">
-                        <label for="info-label">Enter age group</label>
-                        <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter the age group to which you belong">
-                            <img src="/img/help-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                    <div class="bottom-input d-flex">
-                        <select class="age-input">
-                            <option value="" selected disabled>Select age group</option>
-                            <option value="<40">&lt; 40</option>
-                            <option value="40-59">&ge; 40 &amp; &lt; 60</option>
-                            <option value="≥60">&ge; 60</option>
-                        </select>
-                        <p class="bottom-icon-input error-icon" data-bs-toggle="tooltip" data-bs-title="This field is required">
-                            <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                </div>
-                <!-- fourth input box -->
-                <div class="col">
-                    <div class="top-label d-flex">
-                        <label for="info-label">Enter total applicable deductions</label>
-                        <p class="top-icon-input" data-bs-toggle="tooltip" data-bs-title="Enter the total amount of applicable deductions">
-                            <img src="/img/help-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                    <div class="bottom-input d-flex">
-                        <input class="deductions-income-input" type="text" placeholder="Add total applicable deductions">
-                        <p class="bottom-icon-input" data-bs-toggle="tooltip" data-bs-title="Please enter numbers only">
-                            <img class="alert-icon" src="/img/alert-circle.svg" alt="alert">
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="d-grid gap-2">
-                <button class="submit btn btn-primary" type="button" id="openModal">Submit</button>
-            </div>
 
-            <!-- Modal -->
-            <div class="modal" id="myModal">
-                <div class="overlay"></div>
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h3>Your overall income will be</h3>
-                        <h4 class="sub-title"></h4>
-                        <p>after tax deductions</p>
+                    <!-- Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="overlay"></div>
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <h3>Your overall income will be</h3>
+                                <h4 class="sub-title"></h4>
+                                <p>after tax deductions</p>
+                            </div>
+                            <div class="footer">
+                                <button type="button" class="closebtn btn btn-primary" id="closeModal">Close</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="closebtn btn btn-primary" id="closeModal">Close</button>
-                    </div>
+                    
                 </div>
-            </div>
-              
+            </main>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>

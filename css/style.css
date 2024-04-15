@@ -6,15 +6,30 @@
     box-sizing: border-box;
 }
 
+.outer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+}
+
+.inner-main{
+    max-width: 620px;
+    width: 100%;
+    position: relative;
+}
 .container {
-    margin: auto;
+    margin: 44px;
     border: 2px solid black;
 }
 
 .custom-container{
     max-width: 600px;
     padding: 90px 42px 42px 42px;
-    
+    margin: auto;
 }
 
 /* div containing all the input label submit */
@@ -45,10 +60,19 @@
     border: none;
 }
 
+/* select box css */
+.bottom-input select{
+    width: 90vw;
+    height: 6vh;
+    outline: none;
+    padding: 2px 10px;
+    border: none;
+}
 /* bottom input box icon p tag css */
 .bottom-icon-input{
     margin: auto;
 }
+
 
 /* bottom input box icon css */
 .bottom-icon-input img{
@@ -81,6 +105,7 @@
     left: 0px;
     width: 100%;
     height: 100%;
+    max-width: 600px;
 }
 
 .display{
@@ -102,18 +127,31 @@
     transition: opacity 100ms ease-in-out 200ms;
 }
 .modal .modal-content {
+    text-align: center;
+    max-height: 70vh;
+    height: 95%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     width: 95%;
-    max-width: 350px;
+    max-width: 46vw;
     background: #fff;
     padding: 25px;
     border-radius: 20px;
     box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.05);
     transition: all 300ms ease-in-out;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.modal-body{
+    flex: none;
+    width: 100%;
 }
 
 .modal .modal-content h3{
